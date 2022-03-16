@@ -1,0 +1,124 @@
+Watching for file changes with StatReloader
+Waiting for apps ready_event.
+Apps ready_event triggered. Sending autoreload_started signal.
+Watching dir C:\Users\Administrator\Desktop\blog1\locale with glob **/*.mo.
+Watching dir D:\pycharm\blog\lib\site-packages\django\contrib\admin\locale with glob **/*.mo.
+Watching dir D:\pycharm\blog\lib\site-packages\django\contrib\auth\locale with glob **/*.mo.
+Watching dir D:\pycharm\blog\lib\site-packages\django\contrib\contenttypes\locale with glob **/*.mo.
+Watching dir D:\pycharm\blog\lib\site-packages\django\contrib\sessions\locale with glob **/*.mo.
+Watching dir D:\pycharm\blog\lib\site-packages\django\contrib\messages\locale with glob **/*.mo.
+Watching dir D:\pycharm\blog\lib\site-packages\django\contrib\staticfiles\locale with glob **/*.mo.
+Watching dir C:\Users\Administrator\Desktop\blog1\article\locale with glob **/*.mo.
+Watching dir C:\Users\Administrator\Desktop\blog1\userprofile\locale with glob **/*.mo.
+Watching dir C:\Users\Administrator\Desktop\blog1\comment\locale with glob **/*.mo.
+Watching dir D:\pycharm\blog\lib\site-packages\taggit\locale with glob **/*.mo.
+Watching dir D:\pycharm\blog\lib\site-packages\ckeditor\locale with glob **/*.mo.
+Watching dir D:\pycharm\blog\lib\site-packages\mptt\locale with glob **/*.mo.
+Watching dir D:\pycharm\blog\lib\site-packages\notifications\locale with glob **/*.mo.
+Watching dir C:\Users\Administrator\Desktop\blog1\notice\locale with glob **/*.mo.
+(0.008) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.000) SELECT COUNT(*) AS "__count" FROM "article_articlepost"; args=()
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2021-12-11 11:00:25.697333' AND "django_session"."session_key" = 'grvmemzqxqplpje82g676egzx6q1qr54'); args=('2021-12-11 11:00:25.697333', 'grvmemzqxqplpje82g676egzx6q1qr54')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2; args=(2,)
+(0.000) SELECT COUNT(*) AS "__count" FROM "notifications_notification" WHERE ("notifications_notification"."recipient_id" = 2 AND "notifications_notification"."unread" = 1); args=(2, True)
+(0.008) SELECT "article_articlepost"."id", "article_articlepost"."author_id", "article_articlepost"."title", "article_articlepost"."body", "article_articlepost"."created", "article_articlepost"."updated", "article_articlepost"."total_views", "article_articlepost"."column_id", "article_articlepost"."avatar" FROM "article_articlepost" ORDER BY "article_articlepost"."created" DESC  LIMIT 3; args=()
+(0.000) SELECT "article_articlecolumn"."id", "article_articlecolumn"."title", "article_articlecolumn"."created" FROM "article_articlecolumn" WHERE "article_articlecolumn"."id" = 4; args=(4,)
+(0.008) SELECT DISTINCT "taggit_tag"."id", "taggit_tag"."name", "taggit_tag"."slug" FROM "taggit_tag" INNER JOIN "taggit_taggeditem" ON ("taggit_tag"."id" = "taggit_taggeditem"."tag_id") INNER JOIN "django_content_type" ON ("taggit_taggeditem"."content_type_id" = "django_content_type"."id") WHERE ("django_content_type"."app_label" = 'article' AND "django_content_type"."model" = 'articlepost' AND "taggit_taggeditem"."object_id" = 17); args=('article', 'articlepost', 17)
+(0.000) SELECT COUNT(*) AS "__count" FROM "comment_comment" WHERE "comment_comment"."article_id" = 17; args=(17,)
+(0.000) SELECT "article_articlecolumn"."id", "article_articlecolumn"."title", "article_articlecolumn"."created" FROM "article_articlecolumn" WHERE "article_articlecolumn"."id" = 6; args=(6,)
+(0.000) SELECT DISTINCT "taggit_tag"."id", "taggit_tag"."name", "taggit_tag"."slug" FROM "taggit_tag" INNER JOIN "taggit_taggeditem" ON ("taggit_tag"."id" = "taggit_taggeditem"."tag_id") INNER JOIN "django_content_type" ON ("taggit_taggeditem"."content_type_id" = "django_content_type"."id") WHERE ("django_content_type"."app_label" = 'article' AND "django_content_type"."model" = 'articlepost' AND "taggit_taggeditem"."object_id" = 8); args=('article', 'articlepost', 8)
+(0.000) SELECT COUNT(*) AS "__count" FROM "comment_comment" WHERE "comment_comment"."article_id" = 8; args=(8,)
+(0.000) SELECT "article_articlecolumn"."id", "article_articlecolumn"."title", "article_articlecolumn"."created" FROM "article_articlecolumn" WHERE "article_articlecolumn"."id" = 6; args=(6,)
+(0.000) SELECT DISTINCT "taggit_tag"."id", "taggit_tag"."name", "taggit_tag"."slug" FROM "taggit_tag" INNER JOIN "taggit_taggeditem" ON ("taggit_tag"."id" = "taggit_taggeditem"."tag_id") INNER JOIN "django_content_type" ON ("taggit_taggeditem"."content_type_id" = "django_content_type"."id") WHERE ("django_content_type"."app_label" = 'article' AND "django_content_type"."model" = 'articlepost' AND "taggit_taggeditem"."object_id" = 11); args=('article', 'articlepost', 11)
+(0.000) SELECT COUNT(*) AS "__count" FROM "comment_comment" WHERE "comment_comment"."article_id" = 11; args=(11,)
+"GET /article/article-list/ HTTP/1.1" 200 14583
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2021-12-11 11:00:27.413565' AND "django_session"."session_key" = 'grvmemzqxqplpje82g676egzx6q1qr54'); args=('2021-12-11 11:00:27.413565', 'grvmemzqxqplpje82g676egzx6q1qr54')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2; args=(2,)
+(0.000) SELECT "article_articlepost"."id", "article_articlepost"."author_id", "article_articlepost"."title", "article_articlepost"."body", "article_articlepost"."created", "article_articlepost"."updated", "article_articlepost"."total_views", "article_articlepost"."column_id", "article_articlepost"."avatar" FROM "article_articlepost" WHERE "article_articlepost"."id" = 17; args=(17,)
+(0.000) UPDATE "article_articlepost" SET "total_views" = 12 WHERE "article_articlepost"."id" = 17; args=(12, 17)
+(0.000) SELECT COUNT(*) AS "__count" FROM "notifications_notification" WHERE ("notifications_notification"."recipient_id" = 2 AND "notifications_notification"."unread" = 1); args=(2, True)
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2; args=(2,)
+(0.000) SELECT COUNT(*) AS "__count" FROM "comment_comment" WHERE "comment_comment"."article_id" = 17; args=(17,)
+(0.000) SELECT "comment_comment"."id", "comment_comment"."parent_id", "comment_comment"."reply_to_id", "comment_comment"."article_id", "comment_comment"."user_id", "comment_comment"."body", "comment_comment"."created", "comment_comment"."lft", "comment_comment"."rght", "comment_comment"."tree_id", "comment_comment"."level" FROM "comment_comment" WHERE "comment_comment"."article_id" = 17 ORDER BY "comment_comment"."tree_id" ASC, "comment_comment"."lft" ASC; args=(17,)
+"GET /article/article-detail/17/ HTTP/1.1" 200 11985
+"GET /static/sticky_sidebar/jquery.sticky-sidebar.min.js HTTP/1.1" 200 12485
+"GET /static/ckeditor/ckeditor-init.js HTTP/1.1" 200 1498
+"GET /static/ckeditor/ckeditor/ckeditor.js HTTP/1.1" 200 752308
+"GET /static/ckeditor/ckeditor/config.js?t=LAHF HTTP/1.1" 200 338
+"GET /static/ckeditor/ckeditor/lang/en.js?t=LAHF HTTP/1.1" 200 17427
+"GET /static/ckeditor/ckeditor/skins/moono-lisa/editor.css?t=LAHF HTTP/1.1" 200 48239
+"GET /static/ckeditor/ckeditor/styles.js?t=LAHF HTTP/1.1" 200 5579
+"GET /static/ckeditor/ckeditor/plugins/prism/plugin.js?t=LAHF HTTP/1.1" 200 4203
+"GET /static/ckeditor/ckeditor/plugins/codesnippet/plugin.js?t=LAHF HTTP/1.1" 200 3824
+"GET /static/ckeditor/ckeditor/plugins/tableselection/styles/tableselection.css HTTP/1.1" 200 1145
+"GET /static/ckeditor/ckeditor/plugins/scayt/dialogs/dialog.css?t=LAHF HTTP/1.1" 200 419
+"GET /static/ckeditor/ckeditor/plugins/scayt/skins/moono-lisa/scayt.css?t=LAHF HTTP/1.1" 200 381
+"GET /static/ckeditor/ckeditor/plugins/codesnippet/lang/en.js?t=LAHF HTTP/1.1" 200 369
+"GET /static/ckeditor/ckeditor/plugins/dialog/styles/dialog.css HTTP/1.1" 200 249
+"GET /static/ckeditor/ckeditor/plugins/copyformatting/styles/copyformatting.css HTTP/1.1" 200 1513
+"GET /static/ckeditor/ckeditor/plugins/codesnippet/icons/codesnippet.png?t=LAHF HTTP/1.1" 200 597
+"GET /static/ckeditor/ckeditor/skins/moono-lisa/icons.png?t=f6dd30807a HTTP/1.1" 200 12237
+"GET /static/ckeditor/ckeditor/plugins/prism/lib/prism/prism_patched.min.css HTTP/1.1" 200 2062
+"GET /static/ckeditor/ckeditor/contents.css?t=LAHF HTTP/1.1" 200 3094
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2021-12-11 11:00:30.083125' AND "django_session"."session_key" = 'grvmemzqxqplpje82g676egzx6q1qr54'); args=('2021-12-11 11:00:30.083125', 'grvmemzqxqplpje82g676egzx6q1qr54')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2; args=(2,)
+(0.000) SELECT "article_articlepost"."id", "article_articlepost"."author_id", "article_articlepost"."title", "article_articlepost"."body", "article_articlepost"."created", "article_articlepost"."updated", "article_articlepost"."total_views", "article_articlepost"."column_id", "article_articlepost"."avatar" FROM "article_articlepost" WHERE "article_articlepost"."id" = 8; args=(8,)
+(0.047) UPDATE "article_articlepost" SET "total_views" = 29 WHERE "article_articlepost"."id" = 8; args=(29, 8)
+(0.000) SELECT COUNT(*) AS "__count" FROM "notifications_notification" WHERE ("notifications_notification"."recipient_id" = 2 AND "notifications_notification"."unread" = 1); args=(2, True)
+(0.008) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2; args=(2,)
+(0.000) SELECT COUNT(*) AS "__count" FROM "comment_comment" WHERE "comment_comment"."article_id" = 8; args=(8,)
+(0.000) SELECT "comment_comment"."id", "comment_comment"."parent_id", "comment_comment"."reply_to_id", "comment_comment"."article_id", "comment_comment"."user_id", "comment_comment"."body", "comment_comment"."created", "comment_comment"."lft", "comment_comment"."rght", "comment_comment"."tree_id", "comment_comment"."level" FROM "comment_comment" WHERE "comment_comment"."article_id" = 8 ORDER BY "comment_comment"."tree_id" ASC, "comment_comment"."lft" ASC; args=(8,)
+"GET /article/article-detail/8/ HTTP/1.1" 200 23656
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'article' AND "django_content_type"."model" = 'articlepost'); args=('article', 'articlepost')
+(0.000) SELECT COUNT(*) AS "__count" FROM "article_articlepost" INNER JOIN "taggit_taggeditem" ON ("article_articlepost"."id" = "taggit_taggeditem"."object_id" AND ("taggit_taggeditem"."content_type_id" = 7)) INNER JOIN "taggit_tag" ON ("taggit_taggeditem"."tag_id" = "taggit_tag"."id") WHERE "taggit_tag"."name" IN ('自嘲'); args=(7, '自嘲')
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2021-12-11 11:00:31.889711' AND "django_session"."session_key" = 'grvmemzqxqplpje82g676egzx6q1qr54'); args=('2021-12-11 11:00:31.889711', 'grvmemzqxqplpje82g676egzx6q1qr54')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2; args=(2,)
+(0.000) SELECT COUNT(*) AS "__count" FROM "notifications_notification" WHERE ("notifications_notification"."recipient_id" = 2 AND "notifications_notification"."unread" = 1); args=(2, True)
+(0.008) SELECT "article_articlepost"."id", "article_articlepost"."author_id", "article_articlepost"."title", "article_articlepost"."body", "article_articlepost"."created", "article_articlepost"."updated", "article_articlepost"."total_views", "article_articlepost"."column_id", "article_articlepost"."avatar" FROM "article_articlepost" INNER JOIN "taggit_taggeditem" ON ("article_articlepost"."id" = "taggit_taggeditem"."object_id" AND ("taggit_taggeditem"."content_type_id" = 7)) INNER JOIN "taggit_tag" ON ("taggit_taggeditem"."tag_id" = "taggit_tag"."id") WHERE "taggit_tag"."name" IN ('自嘲') ORDER BY "article_articlepost"."created" DESC  LIMIT 1; args=(7, '自嘲')
+(0.000) SELECT "article_articlecolumn"."id", "article_articlecolumn"."title", "article_articlecolumn"."created" FROM "article_articlecolumn" WHERE "article_articlecolumn"."id" = 4; args=(4,)
+(0.000) SELECT DISTINCT "taggit_tag"."id", "taggit_tag"."name", "taggit_tag"."slug" FROM "taggit_tag" INNER JOIN "taggit_taggeditem" ON ("taggit_tag"."id" = "taggit_taggeditem"."tag_id") INNER JOIN "django_content_type" ON ("taggit_taggeditem"."content_type_id" = "django_content_type"."id") WHERE ("django_content_type"."app_label" = 'article' AND "django_content_type"."model" = 'articlepost' AND "taggit_taggeditem"."object_id" = 17); args=('article', 'articlepost', 17)
+(0.000) SELECT COUNT(*) AS "__count" FROM "comment_comment" WHERE "comment_comment"."article_id" = 17; args=(17,)
+"GET /article/article-list/?tag=%E8%87%AA%E5%98%B2 HTTP/1.1" 200 9343
+File C:\Users\Administrator\Desktop\blog1\blog1\settings.py. is_changed: False, is_new: True
+File C:\Users\Administrator\Desktop\blog1\blog1\settings.py previous mtime: None, current mtime: 1639220515.2297733
+C:\Users\Administrator\Desktop\blog1\blog1\settings.py notified as changed. Signal results: [(<function translation_file_changed at 0x0000026A4B29BCA0>, None)].
+C:\Users\Administrator\Desktop\blog1\blog1\settings.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /article/article-detail/17/ HTTP/1.1" 200 11985
+"GET /article/article-detail/8/ HTTP/1.1" 200 23656
+Internal Server Error: /article/article-detail/9999/
+Traceback (most recent call last):
+  File "D:\pycharm\blog\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "D:\pycharm\blog\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\pycharm\blog\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\pycharm\blog\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Administrator\Desktop\blog1\article\views.py", line 71, in article_detail
+    article = ArticlePost.objects.get(id=id)
+  File "D:\pycharm\blog\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\pycharm\blog\lib\site-packages\django\db\models\query.py", line 406, in get
+    raise self.model.DoesNotExist(
+article.models.ArticlePost.DoesNotExist: ArticlePost matching query does not exist.
+"GET /article/article-detail/9999/ HTTP/1.1" 500 86442
+C:\Users\Administrator\Desktop\blog1\article\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Administrator\Desktop\blog1\article\views.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /article/article-detail/9999/
+"GET /article/article-detail/9999/ HTTP/1.1" 404 1780
+Watching for file changes with StatReloader
+Not Found: /article/article-detail/9999/
+"GET /article/article-detail/9999/ HTTP/1.1" 404 1780
+Not Found: /article/article-detail/9999/
+"GET /article/article-detail/9999/ HTTP/1.1" 404 1780
+C:\Users\Administrator\Desktop\blog1\blog1\settings.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Administrator\Desktop\blog1\blog1\settings.py changed, reloading.
