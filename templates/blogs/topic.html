@@ -1,0 +1,27 @@
+{% extends "blogs/base.html" %}
+
+{% block page_header %}
+  <h3>{{ topic }}</h3>
+{% endblock page_header %}
+
+{% block content %}
+  <p>
+    <a href="{% url 'blogs:new_entry' topic.id %}">添加新的描述或内容</a>
+  </p>
+
+  {% for entry in entries %}
+    <div class="card mb-3">
+      <h4 class="card-header">
+        {{ entry.date_added|date:'M d, Y H:i' }}
+        <small><a href="{% url 'blogs:edit_entry' entry.id %}">
+            修改这不合理的描述</a></small>
+      </h4>
+      <div class="card-body">
+        {{ entry.text|linebreaks }}
+      </div>
+    </div>
+  {% empty %}
+    <p>尚无该同学的描述</p>
+  {% endfor %}
+
+{% endblock content %}

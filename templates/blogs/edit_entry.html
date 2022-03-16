@@ -1,0 +1,12 @@
+{% extends "blogs/base.html" %}
+
+{% block content %}
+  <p><a href="{% url "blogs:topic" topic.id %}">{{ topic }}</a></p>
+  <p>修改这不合理的描述：</p>
+
+  <form action="{% url "blogs:edit_entry" entry.id %}" method="post"><!--表单发送-->
+      {% csrf_token %}<!--防止未授权的访问-->
+      {{ form.as_p }}<!--以段落格式渲染-->
+      <button name="submit">保存变动</button>
+  </form>
+{% endblock content %}

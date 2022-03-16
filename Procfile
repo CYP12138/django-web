@@ -1,0 +1,1 @@
+web: gunicorn YPblogs.wsgi --log-file -

@@ -1,0 +1,17 @@
+{% extends "blogs/base.html" %}
+
+{% block page_header %}
+  <div class="jumbotron">
+    <h1 class="display-3">29blogs</h1>
+    <a class="navbar-brand" href="{% url 'blogs:topics'%}">心中的29英雄们（点击查看）</a>
+    <p>---------------------------------</p>
+    <p class="lead">愿我们在彼此看不见的日子里熠熠生辉</p>
+    <p class="lead">这是一个属于29人的网站</p>
+    <p class="lead">你可以匿名写任何你想要写的内容，它们包括：</p>
+         <p class="lead">1.  一个同学</p>
+         <p class="lead">2.  你的关于他（她）的描述</p>
+         <p class="lead">或者你也可以分享一些你想分享的内容</p>
+         <p class="navbar-brand">热烈欢迎29人来分享</p>
+  </div>
+    <p>网站处于雏形，若给你带来不便，我很抱歉，不过有种来打我呀。（皮一下很开心）</p>
+{% endblock page_header %}
